@@ -1,0 +1,341 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+    background-color: rgb(130, 45, 163);
+    transition: background-color 0.5s ease;
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(12, 14, 27, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: #944ea5;
+}
+
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+#interests{
+    max-height: auto;
+}
+
+.container {
+    max-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 5rem;
+    margin-bottom: 40px;
+}
+
+/* Home Section */
+#home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    width: 55%;
+}
+
+.right {
+    width: 30%;
+    position: relative;
+}
+
+#hi {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+#Ayush {
+    color: #944ea5;
+}
+
+#intro {
+    color: white;
+    padding-top: 0%;
+    padding-left: 8%;
+    transform: translateY(-12vh);
+}
+
+
+.innermostborder {
+    width: 20vw;  /* Adjusts based on screen width */
+    height: 20vw;
+    border-radius: 50%;
+    border: 1vw solid plum; /* Scales with screen size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+    top:-30vh;
+    right: 12vw;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    
+}
+
+.middlemostborder {
+    
+    width: 21vw;
+    height: 21vw;
+    border-radius: 50%;
+    border: 1vw solid plum;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+    top: -31vh;
+    right: 12vw;
+    animation-name: spin2;
+    animation-duration: 0.66s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes spin {
+    from{
+        scale: 0;
+        transform: rotate(0deg);
+        border: 10px solid plum;
+    }
+    to{
+        scale: 1;
+        transform: rotate(1440deg);
+        border: 10px solid #944ea5;
+        border-top: 0px;
+        border-left: 0px;
+    }
+    
+}
+
+@keyframes spin2 {
+    from{
+        scale: 0;
+        transform: rotate(0deg);
+        border: 10px solid plum;
+    }
+    to{
+        scale: 1;
+        transform: rotate(1440deg);
+        border: 10px solid #8d27a7;
+        border-top: 0px;
+        border-left: 0px;
+    }
+    
+}
+
+@keyframes up {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+#photo{
+    
+    top: -65vh;
+    width: 20%;
+    right: 0vh;
+    height: 100vh;width: 100vh;
+    animation-name: up;
+    animation-duration: 1s;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Education Section */
+/* Education Section */
+#education {
+    background-color: #2a1a60; /* Dark purple background for contrast */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#education .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #944ea5;
+    margin-bottom: 40px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.details {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.details:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px); /* Hover effect for interactivity */
+}
+
+.details h2 {
+    font-size: 1.8rem;
+    color: #944ea5;
+    margin-bottom: 15px;
+}
+
+.details p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.details span {
+    font-weight: bold;
+    color: #8d27a7;
+}
+
+
+/* Interests Section */
+.interests-section {
+    padding: 40px 20px; /* Add padding to the section */
+    text-align: center; /* Center-align the content */
+}
+
+.interests-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    display: flex; /* Use grid layout */
+    flex-direction: column;
+}
+
+.interests-list li {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for each item */
+    padding: 15px; /* Add padding inside each item */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem; /* Adjust font size */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.interests-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Projects and Experience Sections */
+.project-space,
+.experience-details,
+.about-details {
+    margin-top: 20px;
+}
+/* Projects Section */
+.container2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.project-space {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.weatherApp, .Automation{
+    text-decoration: none;
+    color: white;
+    height: 300px;
+    width: 45%;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.weatherApp:hover, .Automation:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+#weatherApp a{
+    text-decoration: none;
+    color: white;
+}
+
+#sun img {
+    max-width: 100%;
+    height: auto;
+    width: 10vw;
+}
+
+#video img{
+    max-width: 100%;
+    height: auto;
+    width: 10vw;
+}
